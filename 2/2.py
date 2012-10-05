@@ -1,5 +1,14 @@
-def searchMax(inputLine):
+#coding=utf-8
+#	run: python 2.py
+#	input: in
+#	output: out
+
+#	searchMax динамически ищет путь максимальной стоимости
+#	на основе результатов двух предыдущих шагов
+def searchMax(inputLine): 
 	n = inputLine[0]
+	if n==0:
+		return 0
 	inputLine.append(0)
 	cache = [0, 0]
 	for i in range(1, n+2):
@@ -19,5 +28,3 @@ result = searchMax(inputLine)
 f = open('out','w')
 f.write(str(result))
 f.close()
-
-print result
